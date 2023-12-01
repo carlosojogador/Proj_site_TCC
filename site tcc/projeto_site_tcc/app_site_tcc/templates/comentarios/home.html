@@ -1,0 +1,19 @@
+{% extends 'comentarios/base.html' %}
+{% block conteudo %}
+
+<form action="{% url 'listagem_comentarios' %}" method="post">
+    {% csrf_token %}
+    <div style="text-align: center;"  class="container">
+    </div>
+
+    <div style="text-align: center;"  class="container">
+        
+        <h1>Cadastro de Comentarios</h1>
+       
+        Nome <input name="nome" class="form-control-sm" type="text">
+        Comentario <input name="comentario" class="form-control-sm" type="text">
+        <button class="form-control-sm">Enviar</button>
+    
+    </div>
+</form>
+{% endblock %}
